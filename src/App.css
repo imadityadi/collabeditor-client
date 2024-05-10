@@ -1,0 +1,145 @@
+* {
+  font-family: sans-serif;
+}
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #b9d4df;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #044389;
+  padding: 1rem;
+  width: 30%;
+  border-radius: 10px;
+  height: 50%;
+}
+.form h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form button {
+  /* height: 2rem; */
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  background: #fcff4b;
+  border: none;
+  font-size: 1rem;
+}
+
+.room-id {
+  height: 2rem;
+  width: 100%;
+  padding: 10px 0px;
+  background: white;
+  font-size: 2rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* document page */
+.document-page {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  height: 100vh;
+  align-items: center;
+  background-color: #044389;
+}
+.document-tool {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.document-tool #roomid {
+  color: white;
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fcff4b;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.document-tool button {
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
+  background: #fcff4b;
+  border-radius: 10px;
+}
+.container {
+  background: #fcff4b;
+  /* margin: 4rem 0; */
+  border-radius: 10px;
+}
+
+.container .ql-editor {
+  width: 8.5in;
+  min-height: 5in;
+  padding: 1in;
+  /* margin: 1rem; */
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.container .ql-container.ql-snow {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.container .ql-toolbar.ql-snow {
+  display: flex;
+  border-radius: 10px 10px 0 0;
+
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #5995ed;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+.container .ql-toolbar.ql-snow .ql-formats {
+  color: white;
+  filter: brightness(100);
+}
+@page {
+  margin: 1in;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+
+  .container .ql-editor {
+    width: 6.5in;
+    height: 9in;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+
+  .container .ql-toolbar.ql-snow {
+    display: none;
+  }
+}
