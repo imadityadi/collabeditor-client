@@ -17,16 +17,14 @@ const TOOLBAR_OPTIONS = [
   ["image", "blockquote", "code-block"],
   ["clean"],
 ];
-//http://ec2-13-201-101-2.ap-south-1.compute.amazonaws.com:3001/
+
 export function TextEditor() {
   const { id: documentId } = useParams();
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
   // connecting to socket
   useEffect(() => {
-    const s = io(
-      "https://ec2-13-201-101-2.ap-south-1.compute.amazonaws.com:3001/"
-    );
+    const s = io("https://nodecollabeditor-server.onrender.com");
     setSocket(s);
     console.log(s);
     return () => {
